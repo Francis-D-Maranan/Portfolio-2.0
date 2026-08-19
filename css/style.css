@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root{
+    --bg: #080A0A;
+    --section:#131313;
+    --cards: #151919;
+    --borders: #292D2D;
+    --main-text: #F5F7F2;
+    --muted-text: #A5AAA5;
+    -primary-accent: #B7FF00;
+    --hover-accent: #D0FF4D;
+    --logo-hover: #00ff66;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background: var(--bg);
+    width: 100%;
+    max-width: 1600px;
+    height: 100vh;
+    font-family: "Inter", sans-serif;
+}
+
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 1rem 3rem;
+    height: 60px;
+    border-bottom: 1px solid var(--borders);
+
+    a span{
+        color: var(--hover-accent);
+    }
+}
+
+.navigation .logo{
+    color: var(--main-text);
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: all 0.5s;
+}
+
+.navigation .logo:hover{
+    text-shadow: 0 0 5px var(--hover-accent),
+                0 0 20px var(--hover-accent),
+                0 0 40px var(--hover-accent);
+}
+
+.navigation ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    position: relative;
+}
+
+.navigation ul li a{
+    color: var(--main-text);
+    font-size: 1rem;
+    font-weight: 500;
+    position: relative;
+}
+
+.navigation ul li a::before{
+    content: "";
+    background: var(--hover-accent);
+    border-radius: 12px;
+    height: 2px;
+    width: 0px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.navigation ul li a:hover::before{
+    width: 100%;
+    transition: 350ms ease-in-out;
+}
+
+.navigation ul li a.active::before{
+    width: 100%;
+}
+
+.navigation button{
+    height: 32px;
+    width: 128px;   
+    background: none;
+    border: 1px solid var(--hover-accent);
+    position: relative;
+    cursor: pointer;
+    
+    a{
+        color: var(--main-text);
+        font-size: 12px;
+        font-weight: 600;
+    }
+}
+
+.navigation button::after{
+    content: "";
+    background: linear-gradient(to right, #B7FF00, #D0FF4D );
+    height: 100%;
+    width: 0px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: 350ms ease-in-out;
+}
+
+.navigation button:hover::after{
+    width: 100%;
+}
+
+
+
