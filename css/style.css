@@ -80,16 +80,12 @@ body{
     bottom: 0;
     left: 0;
     position: absolute;
-    z-index: -1;
+    z-index: 999;
 }
 
 .navigation ul li a:hover::before{
     width: 100%;
     transition: 350ms ease-in-out;
-}
-
-.navigation ul li a.active::before{
-    width: 100%;
 }
 
 .navigation button{
@@ -122,6 +118,321 @@ body{
 .navigation button:hover::after{
     width: 100%;
 }
+
+/* star of the hero section */
+
+.hero-section{
+    width: auto;
+    max-width: 1600px;
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+    /* align-items: center; */
+    padding: 8rem 2.5rem 0rem 2.5rem;
+    color: var(--main-text);
+    min-height: 80vh;
+    overflow: hidden;
+}
+ 
+.hero-icons ul{
+    display: grid;
+    gap: 2.5rem;
+    align-items: center;
+    position: relative;
+
+    i{
+        font-size: 1.4rem;
+        color: var(--main-text);
+    }
+}
+
+.hero-icons i:hover{
+    color: var(--hover-accent);
+}
+
+.vertical-line{
+    position: absolute;
+    height: 60%;
+    width: 1px;
+    left: 6%;
+    top: 15%;
+    background: linear-gradient(
+    to bottom, 
+    transparent 0%, 
+    #c0d832 50%, 
+    transparent 100%
+    );  
+}
+
+
+.hero-details .welcome-msg{
+    font-size: 1rem;
+    line-height: 1.8;
+
+    span{
+        color: var(--hover-accent);
+    }
+}
+
+.hero-details h1{
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+
+.hero-details .wrapper{
+    display: inline-flex;
+}
+
+.hero-details .wrapper .static-text{
+    color: var(--main-text);
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.hero-details .wrapper .dynamic-texts{
+    padding-left: 1rem;
+    height: 36px;
+    line-height: 36px;
+    overflow: hidden;
+}
+
+.dynamic-texts li{
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--hover-accent);
+    position: relative;
+    top: 0;
+    animation: slide 6s steps(4) infinite;
+}
+
+@keyframes slide {
+    100%{
+        top: -144px;
+    }
+    
+}
+.dynamic-texts li span{
+    position: relative;
+}
+
+.dynamic-texts li span::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--bg);
+    border-left: 2px solid var(--hover-accent);
+    animation: typing 1.5s steps(14) infinite;
+}
+
+@keyframes typing {
+    100%{
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+    
+}
+
+
+
+.hero-details .information{
+    width: 62%;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: var(--muted-text);
+    line-height: 1.6;
+}
+
+
+.hero-buttons{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hero-buttons button{
+    height: 2.2rem;
+    width: 160px;
+}
+
+.hero-buttons .view-work{
+    background: var(--hover-accent);
+    border: none;
+    border-radius: 4px;
+    position: relative;
+
+    a{
+        color: var(--bg);
+        font-size: 0.7rem;
+        font-weight: 600;
+    }
+
+    i{
+        margin-left: 8px;
+        font-size: 0.7rem;
+        font-weight: 600;
+    }
+}
+
+.hero-buttons .contact-me{
+    background: none;
+    border: 1px solid var(--hover-accent);
+    border-radius: 4px;
+    position: relative;
+
+    a{
+        color: var(--main-text);
+        font-size: 0.7rem;
+        font-weight: 600;
+    }
+
+    i{
+        margin-left: 12px;
+        font-size: 0.7rem;
+        font-weight: 600;
+    }
+}
+
+.hero-buttons .contact-me::after{
+    content: "";
+    background: linear-gradient(to right, #D0FF4D );
+    height: 100%;
+    width: 0px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: 350ms ease-in-out;
+
+    a{
+        color: #080A0A;
+    }
+}
+
+.hero-buttons .contact-me:hover::after{
+    width: 100%;
+}
+
+.hero-buttons .contact-me a:hover{
+    color: var(--bg);
+}
+
+.profile{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    right: 0;
+}
+
+.profile img{
+    position: absolute;
+
+    width: clamp(320px, 32vw, 420px);
+
+    right: 10%;
+    bottom: -555px;
+
+    z-index: 2;
+}
+
+.profile::before {
+    content: "";
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    right: 15%;
+    top: 10%;
+
+    background: #b8ff00;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.12;
+
+    z-index: 0;
+}
+
+.glow-circle {
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    right: -0.5%;
+    top: 5%;
+
+    border: 2px solid #b8ff00;
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 10px #b8ff00,
+        0 0 25px rgba(184, 255, 0, 0.6),
+        0 0 50px rgba(184, 255, 0, 0.3);
+
+    z-index: 1;
+}
+
+.plus{
+    position: absolute;
+    z-index: 1;
+
+    width: 16px;
+    height: 16px;
+}
+
+.plus::before,
+.plus::after {
+    content: "";
+    position: absolute;
+    background: #b8ff00;
+}
+
+.plus::before {
+    width: 100%;
+    height: 1px;
+    top: 50%;
+}
+
+.plus::after {
+    width: 1px;
+    height: 100%;
+    left: 50%;
+}
+
+
+.some-details{
+    position: relative;
+    margin-top:400px;
+    line-height: 1.8;
+
+    p{
+        color: var(--hover-accent);
+        font-size: 1rem;
+    }
+}
+
+.some-details .country{
+    color: var(--main-text);
+    font-size: 1rem;
+}
+
+.some-details .country::before{
+    content: "";
+    background: var(--hover-accent);
+    border-radius: 12px;
+    height: 2px;
+    width: 50%;
+    bottom: 60%;
+    left: 25%;
+    position: absolute;
+    z-index: 999;
+}
+
+
 
 
 
