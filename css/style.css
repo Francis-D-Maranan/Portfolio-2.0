@@ -21,10 +21,9 @@
     font-family: "Space Grotesk", sans-serif;
 }
 
-*::-webkit-scrollbar {
+*::-webkit-scrollbar{
     display: none;
 }
-
 body{
     background: var(--bg);
     width: 100%;
@@ -85,12 +84,12 @@ body{
     bottom: 0;
     left: 0;
     position: absolute;
-    z-index: 999;
+    z-index: 1;
+    transition: 350ms ease-in-out;
 }
 
 .navigation ul li a:hover::before{
     width: 100%;
-    transition: 350ms ease-in-out;
 }
 
 .navigation button{
@@ -100,12 +99,15 @@ body{
     border: 1px solid var(--hover-accent);
     position: relative;
     cursor: pointer;
-    
-    a{
-        color: var(--main-text);
-        font-size: 12px;
-        font-weight: 600;
-    }
+}
+
+.navigation button a{
+    position: relative;
+    color: var(--main-text);
+    font-size: 12px;
+    font-weight: 600;
+    z-index: 1;
+    transition: 350ms ease-in-out;
 }
 
 .navigation button::after{
@@ -116,12 +118,16 @@ body{
     position: absolute;
     left: 0;
     top: 0;
-    z-index: -1;
+    z-index: 0;
     transition: 350ms ease-in-out;
 }
 
 .navigation button:hover::after{
     width: 100%;
+}
+
+.navigation button:hover a{
+    color: var(--bg);
 }
 
 /* star of the hero section */
@@ -288,6 +294,7 @@ body{
     border: 1px solid var(--hover-accent);
     border-radius: 4px;
     position: relative;
+    overflow: hidden;
 
     a{
         color: var(--main-text);
@@ -302,28 +309,31 @@ body{
     }
 }
 
+.hero-buttons .contact-me a{
+    position: relative;
+    z-index: 1;
+    color: white;
+    transition: color 350ms ease-in-out;
+}
+
 .hero-buttons .contact-me::after{
     content: "";
-    background: linear-gradient(to right, #D0FF4D );
+    background: #D0FF4D;
     height: 100%;
-    width: 0px;
+    width: 0;
     position: absolute;
     left: 0;
     top: 0;
-    z-index: -1;
+    z-index: 0;
     transition: 350ms ease-in-out;
-
-    a{
-        color: #080A0A;
-    }
 }
 
-.hero-buttons .contact-me:hover::after{
+.hero-buttons .contact-me:hover::after {
     width: 100%;
 }
 
-.hero-buttons .contact-me a:hover{
-    color: var(--bg);
+.hero-buttons .contact-me:hover a {
+    color: #080A0A;
 }
 
 .profile{
@@ -440,7 +450,7 @@ body{
 }
 
 .plus-1 {
-    bottom: -1%;
+    bottom: -35%;
     left: 50%;
 }
 
@@ -465,7 +475,7 @@ body{
 }
 
 .plus-6 {
-    bottom: 100%;
+    bottom: 3%;
     right: 25%;
 }
 
