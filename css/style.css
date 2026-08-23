@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 :root{
     --bg: #080A0A;
     --section:#131313;
@@ -18,6 +18,7 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    font-family: "Space Grotesk", sans-serif;
 }
 
 body{
@@ -124,15 +125,16 @@ body{
 .hero-section{
     width: auto;
     max-width: 1600px;
+    background: #080A0A;
     display: flex;
     justify-content: space-between;
     gap: 5rem;
     /* align-items: center; */
     padding: 8rem 2.5rem 0rem 2.5rem;
     color: var(--main-text);
-    min-height: 80vh;
+    min-height: 75vh;
     overflow: hidden;
-    border-bottom: .5px solid var(--muted-text);
+    border-bottom: .5px solid var(--borders);
 }
  
 .hero-icons ul{
@@ -377,6 +379,7 @@ body{
     z-index: 1;
 }
 
+/* this is the plus icons made by A.I I will study it if I have the time */
 .plus{
     position: absolute;
     z-index: 1;
@@ -385,25 +388,82 @@ body{
     height: 16px;
 }
 
+.plus-icons {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.plus {
+    position: absolute;
+
+    width: 14px;
+    height: 14px;
+
+    opacity: .5;
+}
+
 .plus::before,
 .plus::after {
     content: "";
+
     position: absolute;
-    background: #b8ff00;
+
+    background: var(--hover-accent);
 }
 
+/* Horizontal line */
 .plus::before {
     width: 100%;
-    height: 1px;
+    height: 2px;
+
     top: 50%;
+    left: 0;
+
+    transform: translateY(-50%);
 }
 
+/* Vertical line */
 .plus::after {
-    width: 1px;
+    width: 2px;
     height: 100%;
+
+    top: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+.plus-1 {
+    bottom: -1%;
     left: 50%;
 }
 
+.plus-2 {
+    top: 20%;
+    right: 5%;
+}
+
+.plus-3 {
+    top: 48%;
+    left: 2%;
+}
+
+.plus-4 {
+    top: 65%;
+    right: 8%;
+}
+
+.plus-5 {
+    bottom: 10%;
+    left: 15%;
+}
+
+.plus-6 {
+    bottom: 100%;
+    right: 25%;
+}
 
 .some-details{
     position: relative;
@@ -427,8 +487,8 @@ body{
     border-radius: 12px;
     height: 2px;
     width: 50%;
-    bottom: 60%;
-    left: 25%;
+    bottom: 45%;
+    left: 20%;
     position: absolute;
     z-index: 999;
 }
@@ -439,13 +499,15 @@ body{
 #about-me{
     width: auto;
     max-width: 1600px;
-    height: 60vh;
+    height: 50vh;
+    background:#101313;
     display: flex;
     gap: 3rem;
     justify-content: space-between;
     color: var(--main-text);
-    padding: 16px 36px 16px 36px;
+    padding: 16px 36px 0px 36px;
     position: relative;
+    border-bottom: 1px solid var(--borders);
 }
 
 .section-title{
