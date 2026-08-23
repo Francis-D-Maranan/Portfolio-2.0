@@ -132,6 +132,7 @@ body{
     color: var(--main-text);
     min-height: 80vh;
     overflow: hidden;
+    border-bottom: .5px solid var(--muted-text);
 }
  
 .hero-icons ul{
@@ -431,6 +432,135 @@ body{
     position: absolute;
     z-index: 999;
 }
+
+
+/* about me section */
+
+#about-me{
+    width: auto;
+    max-width: 1600px;
+    height: 60vh;
+    display: flex;
+    gap: 3rem;
+    justify-content: space-between;
+    color: var(--main-text);
+    padding: 16px 36px 16px 36px;
+    position: relative;
+}
+
+.section-title{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.section-title h1{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--hover-accent);
+    letter-spacing: 1px;
+}
+
+.section-title .number{
+    font-size: 3rem;
+    font-weight: 800;
+    color: transparent;
+    -webkit-text-stroke: 1.5px #333333;
+}
+
+.section-left-details img{
+    border: 3px solid var(--hover-accent);
+}
+
+.section-mid-details h2{
+    font-size: 2rem;
+    font-weight: 600;
+    max-width: 370px;
+    padding: 70px 0px 12px 0px;
+    line-height: 1;
+    letter-spacing: 0.2px;
+    position: relative;
+    text-transform: uppercase;
+
+    span{
+        color: var(--hover-accent);
+    }
+}
+
+.section-mid-details h2::before{
+    content: "";
+    background: var(--hover-accent);
+    border-radius: 12px;
+    height: 2px;
+    width: 20%;
+    bottom: 1%;
+    left: 1%;
+    position: absolute;
+    z-index: 999;
+}
+
+.section-mid-details p{
+    max-width: 490px;
+    padding: 32px 12px 12px 0px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--muted-text);
+    line-height: 1.8;
+    letter-spacing: 1px;
+}
+
+.about-vertical-line{
+    background: var(--muted-text);
+    height: 50%;
+    width: 1px;
+    top: 18%;
+    position: absolute;
+    left: 73%;
+}
+
+.about-me-CRU{
+    padding: 64px 0px 12px 0px;   
+}
+
+.cru-card{
+    display: flex;
+    /* align-items: center; */
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.cru-card i{
+    font-size: 1.5rem;
+    color: var(--hover-accent);
+    border-radius: 8px;
+    border: 1px solid var(--hover-accent);
+    padding: 1.5rem;
+}
+
+.cru-card h3{
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    line-height: 1.8;
+}
+
+.cru-card p{
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--muted-text);
+    max-width: 220px;
+    line-height: 1.6;
+}
+
+
+.cru-card i:hover{
+    color: var(--bg);
+    background: var(--hover-accent);
+}
+
+
+
 
 
 
