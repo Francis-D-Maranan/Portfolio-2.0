@@ -528,7 +528,7 @@ body{
     display: flex;
     gap: 1rem;
     align-items: center;
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
 }
 
 .section-title h1{
@@ -612,6 +612,7 @@ body{
     border-radius: 8px;
     border: 1px solid var(--hover-accent);
     padding: 1.5rem;
+    transition: 350ms ease-in-out;
 }
 
 .cru-card h3{
@@ -635,6 +636,112 @@ body{
     background: var(--hover-accent);
 }
 
+/* start of the skills section */
+
+#my-skill{
+    padding: 2rem;
+    height: 45vh;
+    border-bottom: 1px solid var(--borders);
+}
+
+.skills{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill-card{
+    padding: 1rem 2rem 1rem 2rem;
+    text-align: center;
+    color: var(--main-text);
+    height: 80%;
+    border: 1px solid #292D2D;
+    border-radius: 8px;
+    width: 13%;
+    background: #151919;
+    cursor: pointer;
+    transition: ease-in-out 350ms;
+
+}
+
+svg{
+    color: var(--hover-accent);
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.skill-card h2{
+    font-size: 1.2rem;
+}
+
+.progress-section {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.darkgray-bg{
+    width: 70%;
+    height: 5px;
+    margin: 0.5rem;
+    border-radius: 8px;
+    background-color: #292D2D;
+    position: relative;
+}
+
+.lime-section0{
+    background-color: var(--hover-accent);
+    width: 50%;
+    height: 5px;
+    border-radius: 8px;
+}
+
+.lime-section1{
+    background-color: var(--hover-accent);
+    width: 45%;
+    height: 5px;
+    border-radius: 8px;
+}
+
+.lime-section2{
+    background-color: var(--hover-accent);
+    width: 5%;
+    height: 5px;
+    border-radius: 8px;
+}
+
+.lime-section3{
+    background-color: var(--hover-accent);
+    width: 10%;
+    height: 5px;
+    border-radius: 8px;
+}
+
+.lime-section4{
+    background-color: var(--hover-accent);
+    width: 9%;
+    height: 5px;
+    border-radius: 8px;
+}
+
+.lime-section5{
+    background-color: var(--hover-accent);
+    width: 7%;
+    height: 5px;
+    border-radius: 8px;
+}
+
+.skill-card:hover {
+    /* 1. Lifts the card up */
+  transform: translateY(-20px);
+  
+  /* 2. Lights up the border with your accent color */
+  border-color: #D0FF4D;
+  
+  /* 3. Creates a vibrant neon glow using your accent color */
+  box-shadow: 0 15px 30px rgba(208, 255, 77, 0.4);
+}
 
 
 
