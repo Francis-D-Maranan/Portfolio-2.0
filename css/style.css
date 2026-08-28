@@ -31,6 +31,9 @@ body{
     height: 100vh;
     font-family: "Inter", sans-serif;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 .navigation{
     display: flex;
@@ -743,7 +746,10 @@ svg{
   box-shadow: 0 15px 30px rgba(208, 255, 77, 0.4);
 }
 
-
+.percentage{
+    font-size: 0.8rem;
+    font-weight: 500;
+}
 
 
 
