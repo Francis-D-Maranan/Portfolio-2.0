@@ -7,7 +7,7 @@
     --borders: #292D2D;
     --main-text: #F5F7F2;
     --muted-text: #A5AAA5;
-    -primary-accent: #B7FF00;
+    --primary-accent: #B7FF00;
     --hover-accent: #D0FF4D;
     --logo-hover: #00ff66;
 }
@@ -46,7 +46,7 @@ html{
     border-bottom: 1px solid var(--borders);
 
     a span{
-        color: var(--hover-accent);
+        color: var(--primary-accent);
     }
 }
 
@@ -80,7 +80,7 @@ html{
 
 .navigation ul li a::before{
     content: "";
-    background: var(--hover-accent);
+    background: var(--primary-accent);
     border-radius: 12px;
     height: 2px;
     width: 0px;
@@ -99,7 +99,7 @@ html{
     height: 32px;
     width: 128px;   
     background: none;
-    border: 1px solid var(--hover-accent);
+    border: 1px solid var(--primary-accent);
     position: relative;
     cursor: pointer;
 }
@@ -163,7 +163,7 @@ html{
 }
 
 .hero-icons i:hover{
-    color: var(--hover-accent);
+    color: var(--primary-accent);
 }
 
 .vertical-line{
@@ -186,7 +186,7 @@ html{
     line-height: 1.8;
 
     span{
-        color: var(--hover-accent);
+        color: var(--primary-accent);
     }
 }
 
@@ -215,7 +215,7 @@ html{
 .dynamic-texts li{
     font-size: 1.8rem;
     font-weight: 500;
-    color: var(--hover-accent);
+    color: var(--primary-accent);
     position: relative;
     top: 0;
     animation: slide 6s steps(4) infinite;
@@ -238,7 +238,7 @@ html{
     height: 100%;
     width: 100%;
     background: var(--bg);
-    border-left: 2px solid var(--hover-accent);
+    border-left: 2px solid var(--primary-accent);
     animation: typing 1.5s steps(14) infinite;
 }
 
@@ -274,7 +274,7 @@ html{
 }
 
 .hero-buttons .view-work{
-    background: var(--hover-accent);
+    background: var(--primary-accent);
     border: none;
     border-radius: 4px;
     position: relative;
@@ -294,7 +294,7 @@ html{
 
 .hero-buttons .contact-me{
     background: none;
-    border: 1px solid var(--hover-accent);
+    border: 1px solid var(--primary-accent);
     border-radius: 4px;
     position: relative;
     overflow: hidden;
@@ -427,7 +427,7 @@ html{
 
     position: absolute;
 
-    background: var(--hover-accent);
+    background: var(--primary-accent);
 }
 
 /* Horizontal line */
@@ -750,6 +750,156 @@ svg{
     font-size: 0.8rem;
     font-weight: 500;
 }
+
+#featured-projects{
+    padding: 1rem 2rem 1rem 2rem;
+    height: 70vh;
+    width: auto;
+    max-width: 1600px;
+    background: #151919;
+
+    .section-left-details{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+.viewall button{
+    background: none;
+    height: 50%;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem 1rem 2rem 1rem;
+    border: 1px solid var(--hover-accent);
+    border-radius: 8px;
+    position: relative;
+    a{
+        color: var(--main-text);
+        z-index: 1;
+        position: relative;
+        font-size: 0.7rem;
+        font-weight: 600;
+    }
+}
+
+
+.viewall button::after{
+    content: "";
+    background: linear-gradient(to right, #B7FF00, #D0FF4D );
+    border-radius: 6px;
+    height: 100%;
+    width: 0px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    transition: 350ms ease-in-out;
+}
+
+.viewall button:hover::after{
+    width: 100%;
+}
+
+.viewall button:hover a{
+    color: var(--bg);
+}
+
+.project-container{
+    color: var(--main-text);
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    padding: 2rem;
+    height: 55vh;
+}
+
+.project-card{
+    height: 50vh;
+    border-top: 3px solid var(--hover-accent);
+    border-left: 2px solid var(--borders);
+    border-right: 2px solid var(--borders);
+    border-bottom: 2px solid var(--borders);
+    border-radius: 8px;
+    background-color: var(--bg);
+}
+
+.project-kltr{
+    background-image: url(/assets/images/background/featured-image-3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50%;
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 4px 4px 0px 0px;
+    border-left: 1px solid var(--hover-accent);
+    border-right: 1px solid var(--hover-accent);
+    border-bottom: 1px solid var(--borders);
+}
+
+.project-details{
+    padding: 0rem 1.5rem 0rem 1.5rem;
+
+    span{
+        color: var(--hover-accent);
+        line-height: 1.8;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    h1{
+        font-size: 1.5rem;
+        line-height: 1.8;
+    }
+
+    p{
+        width: 90%;
+        color: var(--muted-text);
+        letter-spacing: 0.1px;
+        margin-bottom: 2rem;
+    }
+
+    button{
+        background: none;
+        border: none;
+        a{
+            color: var(--hover-accent);
+        }
+    }
+
+}
+
+
+
+.project-tchwrld{
+    background-image: url(/assets/images/background/featured-image-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50%;
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 4px 4px 0px 0px;
+    border-left: 1px solid var(--hover-accent);
+    border-right: 1px solid var(--hover-accent);
+    border-bottom: 1px solid var(--borders);
+}
+
+.project-gmf{
+    background-image: url(/assets/images/background/featured-image-2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50%;
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 4px 4px 0px 0px;
+    border-left: 1px solid var(--hover-accent);
+    border-right: 1px solid var(--hover-accent);
+    border-bottom: 1px solid var(--borders);
+}
+
+
+
+
 
 
 
