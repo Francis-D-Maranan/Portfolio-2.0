@@ -500,7 +500,7 @@ html{
 
 .some-details .country::before{
     content: "";
-    background: var(--hover-accent);
+    background: var(--primary-accent);
     border-radius: 12px;
     height: 2px;
     width: 50%;
@@ -537,7 +537,7 @@ html{
 .section-title h1{
     font-size: 1.2rem;
     font-weight: 700;
-    color: var(--hover-accent);
+    color: var(--primary-accent);
     letter-spacing: 1px;
 }
 
@@ -549,7 +549,7 @@ html{
 }
 
 .section-left-details img{
-    border: 3px solid var(--hover-accent);
+    border: 3px solid var(--primary-accent);
 }
 
 .section-mid-details h2{
@@ -563,13 +563,13 @@ html{
     text-transform: uppercase;
 
     span{
-        color: var(--hover-accent);
+        color: var(--primary-accent);
     }
 }
 
 .section-mid-details h2::before{
     content: "";
-    background: var(--hover-accent);
+    background: var(--primary-accent);
     border-radius: 12px;
     height: 2px;
     width: 20%;
@@ -611,9 +611,9 @@ html{
 
 .cru-card i{
     font-size: 1.5rem;
-    color: var(--hover-accent);
+    color: var(--primary-accent);
     border-radius: 8px;
-    border: 1px solid var(--hover-accent);
+    border: 1px solid var(--primary-accent);
     padding: 1.5rem;
     transition: 350ms ease-in-out;
 }
@@ -670,7 +670,7 @@ html{
 }
 
 svg{
-    color: var(--hover-accent);
+    color: var(--primary-accent);
     font-size: 5rem;
     margin-bottom: 1rem;
 }
@@ -694,42 +694,42 @@ svg{
 }
 
 .lime-section0{
-    background-color: var(--hover-accent);
+    background-color: var(--primary-accent);
     width: 50%;
     height: 5px;
     border-radius: 8px;
 }
 
 .lime-section1{
-    background-color: var(--hover-accent);
+    background-color: var(--primary-accent);
     width: 45%;
     height: 5px;
     border-radius: 8px;
 }
 
 .lime-section2{
-    background-color: var(--hover-accent);
+    background-color: var(--primary-accent);
     width: 5%;
     height: 5px;
     border-radius: 8px;
 }
 
 .lime-section3{
-    background-color: var(--hover-accent);
+    background-color: var(--primary-accent);
     width: 10%;
     height: 5px;
     border-radius: 8px;
 }
 
 .lime-section4{
-    background-color: var(--hover-accent);
+    background-color: var(--primary-accent);
     width: 9%;
     height: 5px;
     border-radius: 8px;
 }
 
 .lime-section5{
-    background-color: var(--hover-accent);
+    background-color: var(--primary-accent);
     width: 7%;
     height: 5px;
     border-radius: 8px;
@@ -771,7 +771,7 @@ svg{
     width: 100%;
     margin-top: 1rem;
     padding: 1rem 1rem 2rem 1rem;
-    border: 1px solid var(--hover-accent);
+    border: 1px solid var(--primary-accent);
     border-radius: 8px;
     position: relative;
     a{
@@ -816,7 +816,7 @@ svg{
 
 .project-card{
     height: 50vh;
-    border-top: 3px solid var(--hover-accent);
+    border-top: 3px solid var(--primary-accent);
     border-left: 2px solid var(--borders);
     border-right: 2px solid var(--borders);
     border-bottom: 2px solid var(--borders);
@@ -832,8 +832,8 @@ svg{
     width: 100%;
     margin-bottom: 1rem;
     border-radius: 4px 4px 0px 0px;
-    border-left: 1px solid var(--hover-accent);
-    border-right: 1px solid var(--hover-accent);
+    border-left: 1px solid var(--primary-accent);
+    border-right: 1px solid var(--primary-accent);
     border-bottom: 1px solid var(--borders);
 }
 
@@ -841,7 +841,7 @@ svg{
     padding: 0rem 1.5rem 0rem 1.5rem;
 
     span{
-        color: var(--hover-accent);
+        color: var(--primary-accent);
         line-height: 1.8;
         font-weight: 600;
         letter-spacing: 1px;
@@ -864,9 +864,18 @@ svg{
         border: none;
         a{
             color: var(--hover-accent);
+            transition: ease-in-out 350ms;
         }
     }
 
+}
+
+.project-details button a:hover{
+    color: var(--primary-accent);
+    text-shadow: 
+    0 0 5px #D0FF4D,
+    0 0 15px #D0FF4D,
+    0 0 30px #D0FF4D;
 }
 
 
