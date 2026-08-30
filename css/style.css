@@ -28,11 +28,17 @@ body{
     background: var(--bg);
     width: 100%;
     max-width: 1600px;
-    height: 100vh;
     font-family: "Inter", sans-serif;
 }
 html{
     scroll-behavior: smooth;
+}
+
+header{
+    position: fixed; top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(45px);
+    width: inherit;
 }
 
 .navigation{
@@ -143,6 +149,7 @@ html{
     justify-content: space-between;
     gap: 5rem;
     /* align-items: center; */
+    padding-top: calc(8rem + 60px);
     padding: 8rem 2.5rem 0rem 2.5rem;
     color: var(--main-text);
     min-height: 75vh;
@@ -757,7 +764,7 @@ svg{
     width: auto;
     max-width: 1600px;
     background: #151919;
-
+    border-bottom: 1px solid var(--borders);
     .section-left-details{
         display: flex;
         justify-content: space-between;
@@ -906,6 +913,42 @@ svg{
     border-bottom: 1px solid var(--borders);
 }
 
+.info{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 6rem 1.5rem 6rem;
+    color: var(--main-text);
+    height: 18vh;
+    width: auto;
+    max-width: 1600px;
+    border-bottom: 1px solid var(--borders);
+}
+
+.info .divider{
+    height: 100px;
+    background-color: var(--borders);
+    width: 1px;
+}
+
+.info svg{
+    font-weight: 400;
+}
+
+.info span{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.info p{
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--muted-text);
+}
+
+.info-card{
+    display: flex;
+    gap: 1rem;
+}
 
 
 
