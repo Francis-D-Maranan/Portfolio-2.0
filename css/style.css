@@ -950,6 +950,44 @@ svg{
     gap: 1rem;
 }
 
+#contact{
+    padding: 1rem 2rem 1rem 2rem;
+    height: 50vh;
+    width: auto;
+    max-width: 1600px;
+    color: var(--main-text);
+}
+
+.contact-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 3rem 0rem 3rem;
+}
+
+.contact-details .email, .phone, .location{
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.contact-info svg{
+    font-size: 5rem;
+}
+
+.contact-info span{
+    margin-top: 0.8rem;
+    a{
+        color: var(--main-text);
+    }
+}
+
+
+
+
+
+
+
 
 
 
