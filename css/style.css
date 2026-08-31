@@ -952,17 +952,20 @@ svg{
 
 #contact{
     padding: 1rem 2rem 1rem 2rem;
-    height: 50vh;
+    height: 40vh;
     width: auto;
     max-width: 1600px;
     color: var(--main-text);
+    align-items: center;
+    justify-content: center;
+    background: #101313;
 }
 
 .contact-details{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     padding: 0rem 3rem 0rem 3rem;
+    justify-content: space-between;
 }
 
 .contact-details .email, .phone, .location{
@@ -981,6 +984,55 @@ svg{
         color: var(--main-text);
     }
 }
+
+.mid-details h1{
+    width: auto;
+    max-width: 380px;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+
+    span{
+        color: var(--primary-accent);
+    }
+}
+
+.mid-details p{
+    width: auto;
+    max-width: 410px;
+    color: var(--muted-text);
+    letter-spacing: 1px;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.send-msg button{
+    position: relative;
+    height: 50px;
+    width: 200px;
+    margin-top: 3rem;
+    background: var(--primary-accent);
+    border: none;
+    border-radius: 8px;
+    transition: 350ms ease-in-out;
+    cursor: pointer;
+}   
+    
+.send-msg button a{
+    color: var(--bg);
+    font-weight: 600;   
+    position: relative;
+}
+
+.send-msg button:hover{
+    box-shadow: 0 0 5px #D0FF4D,
+    0 0 15px #D0FF4D,
+    0 0 30px #D0FF4D;
+}
+
+
+
 
 
 
